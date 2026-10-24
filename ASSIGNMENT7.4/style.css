@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 7%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+    color: #2563eb;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #334155;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Header CTA */
+.header-button,
+.primary-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.header-button:hover,
+.primary-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+    max-width: 1300px;
+    min-height: 560px;
+    margin: auto;
+    padding: 60px 7%;
+}
+
+/* Hero text */
+.hero-content {
+    flex: 1 1 50%;
+}
+
+.tagline {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    color: #172554;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    color: #64748b;
+    font-size: 17px;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 11px 21px;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secondary-button:hover {
+    background-color: #dbeafe;
+}
+
+/* Hero image */
+.hero-image {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/* Features section */
+.features {
+    padding: 60px 7%;
+    text-align: center;
+    background-color: #eff6ff;
+}
+
+.features h2,
+.contact-section h2 {
+    color: #172554;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.feature-card {
+    flex: 1 1 220px;
+    max-width: 350px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+/* Contact section */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 25px;
+}
+
+.contact-anchor {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #eff6ff;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px 7%;
+    background-color: #172554;
+    color: white;
+}
+
+.footer a {
+    color: #bfdbfe;
+    text-decoration: none;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 6%;
+        gap: 30px;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        max-width: 550px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .header-button,
+    .primary-button,
+    .secondary-button {
+        padding: 10px 16px;
+    }
+}
